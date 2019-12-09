@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!------ Include the above in your HEAD tag ---------->
+  </head>
+
+  <body>
+    <div class="container" style="padding-top: 100px;">
+              <h1>Confirm Purchase</h1>
+      <form action="/purchase"  method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Product ID</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" name= productid aria-describedby="emailHelp" placeholder="" value="<%=id1%>">
+        </div>
+        <div class="container py-5">
+
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+                <form class="form-horizontal span6">
+                  <fieldset>
+                    <legend>Payment</legend>
+
+                    <div class="control-group">
+                      <label class="control-label">Card Holder's Name</label>
+                      <div class="controls">
+                        <input type="text" class="input-block-level" pattern="\w+ \w+.*" name = "c_name" title="Fill your first and last name" required>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label">Card Number</label>
+                      <div class="controls">
+                        <div class="row-fluid">
+                          <div class="span3">
+                            <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="First four digits" required>
+                          </div>
+                          <div class="span3">
+                            <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Second four digits" required>
+                          </div>
+                          <div class="span3">
+                            <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Third four digits" required>
+                          </div>
+                          <div class="span3">
+                            <input type="text" class="input-block-level" autocomplete="off" maxlength="4" pattern="\d{4}" title="Fourth four digits" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label">Card Expiry Date</label>
+                      <div class="controls">
+                        <div class="row-fluid">
+                          <div class="span9">
+                            <select class="input-block-level">
+                              <option>Jan</option>
+                              <option>Feb</option>
+                              <option>Mar</option>
+                              <option>Apr</option>
+                              <option>May</option>
+                              <option>Jun</option>
+                              <option>Jul</option>
+                              <option>Aug</option>
+                              <option>Sep</option>
+                              <option>Oct</option>
+                              <option>Nov</option>
+                              <option>Dec</option>
+                            </select>
+                          </div>
+                          <div class="span3">
+                            <select class="input-block-level">
+                              <option>2013</option>
+                              <option>2014</option>
+                              <option>2015</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label">Card CVV</label>
+                      <div class="controls">
+                        <div class="row-fluid">
+                          <div class="span3">
+                            <input type="text" class="input-block-level" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" required>
+                          </div>
+                          <div class="span8">
+                            <!-- screenshot may be here -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <a href="/home.html"><button type="button" class="btn">Cancel</button></a>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+      </form>
+
+    </div>
+<script type="text/javascript">
+  $(function() {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

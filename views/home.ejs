@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ford Home</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">FORD</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="home.html">Products<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="distrubution.html">Distrubution Centers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="myproducts.html" tabindex="-1" >Your Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="orders" tabindex="-1" >Shipments</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout" tabindex="-1" >LOGOUT</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
+
+<div class="card-columns row">
+    <% items.forEach(function(item){ %>
+  <div class="card column">
+
+    <img class="cardimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbYBj71u-p7FGmoF0Vbew4N6kN0tMeYCYEeHQrMwUZ-lfjW5Yv" alt="" style="width:100%">
+    <h1><%= item.name%></h1>
+    <p class="price">$<%= item.val%></p>
+    <p>Weight: <%= item.weight%></p>
+    <p>Productid: <%= item._id%></p>
+        <p> <a href data-toggle="modal" data-target="#ab<%=item._id%>" >View</a> <p>
+
+    <p><button class="btn"><a href = '/buyproducts/<%= item._id%>' >BUY</a></button></p>
+
+        <div class="modal fade product_view" id="ab<%=item._id%>">
+          <div class="modal-dialog" style="width: 100%;">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title"><%=item.name%></h4>
+                    <a href="" class="close" data-dismiss="modal">&times;</a>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-md-6 product_img">
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbYBj71u-p7FGmoF0Vbew4N6kN0tMeYCYEeHQrMwUZ-lfjW5Yv" class="img-responsive">
+                          </div>
+                          <div class="col-md-6 product_content">
+                              <h4>Product Id: <span><%=item._id%></span></h4>
+
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <h3 class="cost"><span class="glyphicon glyphicon-usd"></span>$<%=item.val%><small class="pre-cost"><span class="glyphicon glyphicon-usd"></span>$999</small></h3>
+                              <div class="row">
+
+                                  <!-- <div class="col-md-4 col-sm-12">
+                                      <select class="form-control" name="n_qty">
+                                          <option value="" selected="">QTY</option>
+                                          <option value="">1</option>
+                                          <option value="">2</option>
+                                          <option value="">3</option>
+                                      </select>
+                                  </div> -->
+                                  <!-- end col -->
+                              </div>
+                              <div class="space-ten" style="margin-bottom: 20px;"></div>
+                              <div class="btn-ground">
+
+                                  <button type="button" class="btn btn-primary" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-shopping-cart"></span><a href = '/buyproducts/<%= item._id%>' >BUY</a></button>
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-shopping-cart"></span>Cancel</button>
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+        <% })%>
+  </div>
+
+
+
+
+
+
+  <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

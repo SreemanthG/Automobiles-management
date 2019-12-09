@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<link rel="stylesheet" type="text/css" href="css/util.css">
+  	<link rel="stylesheet" type="text/css" href="css/login.css">
+  <!--===============================================================================================-->
+  </head>
+    <title>Login</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css\styles.css"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <form action="/loginfilled" method="POST">
+      <div class="limiter">
+    		<div class="container-login100" style="background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);">
+    			<div class="wrap-login100">
+    				<form class="login100-form validate-form">
+    					<span class="login100-form-title p-b-22">
+    						Welcome
+    					</span>
+    					<span class="login100-form-title p-b-48">
+    						<i class="zmdi zmdi-font"></i>
+    					</span>
+
+    					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+    						<input class="input100" required type="text" id="exampleInputEmail1" name="l_name" placeholder="Email">
+    						<span class="focus-input100"></span>
+    					</div>
+
+    					<div class="wrap-input100  validate-input" data-validate="Enter password">
+    						<span class="btn-show-pass">
+    							<i class="zmdi zmdi-eye"></i>
+    						</span>
+    						<input class="input100" type="password" required name="l_password" id="exampleInputPassword1" placeholder="Password">
+    						<span class="focus-input100"></span>
+    					</div>
+              <div class="form-group form-check">
+              <select name="l_subject" required style="border-radius:7px;">
+                  <option disabled="disabled" selected="selected">Choose option</option>
+                  <option value="Distrubution Center">Distrubution Center</option>
+                  <option value="Dealer">Dealer</option>
+                  <!-- <option value="Customer">Customer</option> -->
+              </select>
+              </div>
+    					<div class="container-login100-form-btn" style="margin-top:30px">
+    						<div class="wrap-login100-form-btn">
+    							<div class="login100-form-bgbtn"></div>
+    							<button class="login100-form-btn">
+    								Login
+    							</button>
+    						</div>
+    					</div>
+
+</form>
+    					<div class="text-center p-t-115">
+    						<span class="txt1">
+    							Don’t have an account?
+    						</span>
+
+    						<a class="txt2"href="/signup">
+    							Sign Up
+    						</a>
+    					</div>
+    				</form>
+    			</div>
+    		</div>
+    	</div>
+
+
+    	<div id="dropDownSelect1"></div>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+<script type="text/javascript">
+
+</script>
+</html>

@@ -1,0 +1,135 @@
+body{
+  background-color: #e5e5e5;
+  align-items: center;
+}
+.background{
+
+  height: 500px;
+  width: 400px;
+  margin: 100px auto;
+  border-radius: 6px 6px 6px 6px;
+  background-color: #;
+
+}
+.topbar{
+  margin: auto;
+  height: 60px;
+  border-radius: 7px 7px 0 0;
+  padding-top: 10px;
+}
+h1{
+  padding-top: 10px;
+
+}
+.input-name{
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 32px;
+  font-size: 20px;
+}
+.input-box{
+  padding-top: 2px;
+  font-size:20px;
+  margin: auto;
+  border: 4px;
+  height: 40px;
+  width: 350px;
+  border-bottom: 1px solid black;
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+body {
+  background: #2D3142;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* Heading */
+
+/* h1 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 70px 0 0 0;
+  color: #EF8354;
+  font-weight: 300;
+  letter-spacing: 1px;
+} */
+
+span {
+  border: 2px solid #4F5D75;
+  padding: 10px;
+}
+
+
+/* Layout Styling */
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0 150px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Button Styles */
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #64b2cd;
+  margin: 20px 20px 20px 20px;
+  color: #64b2cd;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: #64b2cd;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+
+/* First Button */
+
+#arrow-hover {
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  transform: translateX(60px);
+  opacity: 0;
+  -webkit-transition: all .25s cubic-bezier(.14, .59, 1, 1.01);
+  transition: all .15s cubic-bezier(.14, .59, 1, 1.01);
+  margin: 0;
+  padding: 0 5px;
+}
+#button-2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+#slide {
+  width: 100%;
+  height: 100%;
+  left: -200px;
+  background: #64b2cd;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+#button-2:hover #slide {
+  left: 0;
+}
+
+#button-2:hover a {
+  color: #2D3142;
+}
